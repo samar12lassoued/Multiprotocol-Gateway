@@ -8,7 +8,7 @@ LICENSE = "CLOSED"
 
 
 SRC_URI = "git://github.com/samar12lassoued/gRPCProject.git;protocol=https;branch=main"
-SRCREV= "4ec82b62ba59f68ffed9f868555e33596d7467f5"
+SRCREV= "3520f2d166ed17ffa287fe811ecae09186c7313c"
 
 S = "${WORKDIR}/git"
 
@@ -36,10 +36,12 @@ do_install(){
  
        install -m 0644 ${S}/Config/Config.json ${D}/opt/MultiprotocolGateway
        install -m 0644 ${S}/*.py ${D}/etc/MultiprotocolGateway
+       install -m 0644 ${S}/lib/*.py ${D}/etc/MultiprotocolGateway
     
     
        install -m 0644 ${S}/*.sh ${D}/opt/MultiprotocolGateway
        install -m 0644 ${S}/*.py ${D}/opt/MultiprotocolGateway
+       install -m 0644 ${S}/lib/*.py ${D}/opt/MultiprotocolGateway
     
 		
 }
